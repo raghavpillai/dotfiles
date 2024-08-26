@@ -27,7 +27,6 @@ alias g='git'
 alias gc='gencommit'
 alias gs="git status"
 alias gb="git branch"
-alias gc="git checkout"
 alias gl="git log --oneline --decorate --color"
 alias amend="git add . && git commit --amend --no-edit"
 alias commit="git add . && git commit -m"

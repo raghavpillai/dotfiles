@@ -27,8 +27,11 @@
 	# Pull in remote changes for the current repository and all its submodules.
 	p = pull --recurse-submodules
 
+	# Commit
+	c = commit -m
+
 	# Clone a repository including all submodules.
-	c = clone --recursive
+	cl = clone --recursive
 
 	# Commit all changes.
 	ca = !git add ':(exclude,attr:builtin_objectmode=160000)' && git commit -av
@@ -97,10 +100,6 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-
-[commit]
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
 
 [diff]
 	# Detect copies as well as renames.
