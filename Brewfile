@@ -16,6 +16,9 @@ brew 'mas' # Mac App Store manager
 brew 'pnpm'
 brew 'yarn'
 
+# Random
+brew 'zoxide'
+
 # Apps
 cask '1password'
 cask 'cursor'

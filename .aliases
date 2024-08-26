@@ -17,10 +17,10 @@ alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
 alias reloadshell="omz reload"
 
 # Directories
-alias dotfiles="cd $DOTFILES"
-alias library="cd $HOME/Library"
+alias dotfiles="cd $HOME/dev/dotfiles"
 alias dev="cd $HOME/dev"
 alias speck="cd $HOME/dev/speck"
+alias home="cd $HOME"
 
 # Git
 alias g='git'
