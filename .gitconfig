@@ -10,6 +10,10 @@
 
 [push]
 	autoSetupRemote = true
+	# https://git-scm.com/docs/git-config#git-config-pushdefault
+	default = simple
+	# Make `git push` push relevant annotated tags when pushing branches out.
+	followTags = true
 
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.
@@ -18,6 +22,9 @@
 	# View the current working tree status using the short format.
 	s = status -s
 
+	# Add all
+	a = add
+
 	# Show the diff between the latest commit and the current state.
 	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
@@ -25,10 +32,16 @@
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
 	# Pull in remote changes for the current repository and all its submodules.
-	p = pull --recurse-submodules
+	pl = pull --recurse-submodules
+
+	# Push to remote
+	ps = push
 
 	# Commit
 	c = commit -m
+
+	# checkout
+	co = checkout
 
 	# Clone a repository including all submodules.
 	cl = clone --recursive
@@ -72,7 +85,7 @@
 	fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
 
 	# Remove branches that have already been merged with main.
-	# a.k.a. ‘delete merged’
+	# a.k.a. 'delete merged'
 	dm = "!git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
 
 	# List contributors with number of commits.
@@ -85,25 +98,12 @@
 	# Show most recently changed branches first.
 	sort = -committerdate
 
-[color "branch"]
-	current = yellow reverse
-	local = yellow
-	remote = green
+[merge]
+	# Include summaries of merged commits in newly created merge commit messages
+	log = true
 
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold # line info
-	old = red # deletions
-	new = green # additions
-
-[color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
-
-[diff]
-	# Detect copies as well as renames.
-	renames = copies
+[diff "rename"]
+    threshold = 50
 
 [diff "bin"]
 	# Use `hexdump` to diff binary files.
@@ -112,13 +112,3 @@
 [help]
 	# Automatically correct and execute mistyped commands.
 	autocorrect = 1
-
-[merge]
-	# Include summaries of merged commits in newly created merge commit messages
-	log = true
-
-[push]
-	# https://git-scm.com/docs/git-config#git-config-pushdefault
-	default = simple
-	# Make `git push` push relevant annotated tags when pushing branches out.
-	followTags = true
