@@ -1,0 +1,36 @@
+# Platforms
+alias arm="env /usr/bin/arch -arm64 /bin/zsh --login"
+alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
+
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
+alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
+
+# pnpm
+alias p='pnpm'
+
+# nav
+alias ls='eza'
+alias r="source ranger"
+
+# Shortcuts
+alias copyssh="pbcopy < $HOME/.ssh/id_ed25519.pub"
+alias reloadshell="omz reload"
+
+# Directories
+alias dotfiles="cd $DOTFILES"
+alias library="cd $HOME/Library"
+alias dev="cd $HOME/dev"
+alias speck="cd $HOME/dev/speck"
+
+# Git
+alias g='git'
+alias gc='gencommit'
+alias gs="git status"
+alias gb="git branch"
+alias gc="git checkout"
+alias gl="git log --oneline --decorate --color"
+alias amend="git add . && git commit --amend --no-edit"
+alias commit="git add . && git commit -m"
+alias diff="git diff"
+alias pull="git pull"
+alias push="git push"
