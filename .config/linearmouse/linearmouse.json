@@ -1,0 +1,121 @@
+{
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
+  "schemes" : [
+    {
+      "if" : {
+        "device" : {
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d",
+          "productID" : "0xc548",
+          "category" : "mouse"
+        }
+      },
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.125
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "productName" : "MX Master 3S",
+          "category" : "mouse",
+          "productID" : "0xb034",
+          "serialNumber" : "2D362A53"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.2
+      }
+    },
+    {
+      "pointer" : {
+        "speed" : 0.2,
+        "acceleration" : 0
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0x1838",
+          "category" : "mouse",
+          "productName" : "SteelSeries Aerox 3 Wireless",
+          "vendorID" : "0x1038"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "speed" : {
+          "vertical" : 0
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "distance" : {
+          "vertical" : "auto"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0x183a",
+          "vendorID" : "0x1038",
+          "category" : "mouse",
+          "productName" : "SteelSeries Aerox 3 Wireless"
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x111",
+          "productName" : "SteelSeries Aerox 3 Wireless",
+          "category" : "mouse",
+          "productID" : "0x183a"
+        }
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.3
+      }
+    }
+  ]
+}
