@@ -1,5 +1,4 @@
 [core]
-	editor = cursor
     pager = delta
 
 [delta]
