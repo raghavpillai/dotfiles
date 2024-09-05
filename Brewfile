@@ -9,6 +9,7 @@ brew 'git'
 brew 'grep'
 brew 'httpie'
 brew 'mas' # Mac App Store manager
+brew 'delta' # Git diff
 
 # Development
 brew 'pnpm'
