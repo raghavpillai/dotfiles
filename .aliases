@@ -8,6 +8,12 @@ alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
 # pnpm
 alias p='pnpm'
 
+# npm
+alias n='npm'
+
+# yarn
+alias y='yarn'
+
 # nav
 alias ls='eza'
 alias r="source ranger"
