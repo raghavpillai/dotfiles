@@ -118,3 +118,5 @@
 [help]
 	# Automatically correct and execute mistyped commands.
 	autocorrect = 1
+[http]
+	postBuffer = 524288000
