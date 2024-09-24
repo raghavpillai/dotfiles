@@ -40,8 +40,14 @@
 	# Pull in remote changes for the current repository and all its submodules.
 	pl = pull --recurse-submodules
 
+	# Pull origin main
+	pm = pull origin main
+
 	# Push to remote
 	ps = push
+
+	# branches
+	br = branch
 
 	# Commit
 	c = commit -m
