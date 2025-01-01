@@ -142,3 +142,4 @@ source <(fzf --zsh)
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(starship init zsh)"
