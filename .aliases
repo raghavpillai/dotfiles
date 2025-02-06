@@ -35,6 +35,7 @@ alias gs="git status"
 alias gb="git branch"
 alias gl="git log --oneline --decorate --color"
 alias gg="lazygit"
+alias pr="gh pr create -B main -f && gh pr view --web"
 
 alias amend="git add . && git commit --amend --no-edit"
 alias commit="git add . && git commit -m"
