@@ -43,6 +43,9 @@
 	# Pull origin main
 	pm = pull origin main
 
+	# PR
+	pr = !"gh pr create -B main -f && gh pr view --web"
+
 	# Push to remote
 	ps = push
 
