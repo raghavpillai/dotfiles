@@ -5,14 +5,11 @@ alias intel="env /usr/bin/arch -x86_64 /bin/zsh --login"
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias mbrew='arch -arm64e /opt/homebrew/bin/brew'
 
-# pnpm
+# ts/js stuff
 alias p='pnpm'
-
-# npm
 alias n='npm'
-
-# yarn
 alias y='yarn'
+alias b='bun'
 
 # nav
 alias ls='eza'
@@ -45,4 +42,21 @@ alias push="git push"
 alias checkout="git checkout"
 alias clone="git clone"
 
+# Apps
 alias code="cursor"
+
+aliases() {
+  grep '^alias ' "$HOME/.aliases" | while IFS= read -r line; do
+    name=${line#alias }
+    name=${name%%=*}
+
+    value=${line#*=}
+    value=${value#\'}
+    value=${value#\"}
+    value=${value%\'}
+    value=${value%\"}
+
+    printf "%s\t%s\n" "$name" "$value"
+  done | column -s $'\t' -t
+}
+
