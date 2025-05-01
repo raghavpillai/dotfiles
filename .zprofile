@@ -8,6 +8,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Created by `pipx` on 2024-07-02 00:45:33
 export PATH="$PATH:/Users/raghav/.local/bin"
 
+# Bun
+export PATH="/Users/raghav/.bun/bin:$PATH"
+
 # Orbstack
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
 
