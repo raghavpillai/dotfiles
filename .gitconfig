@@ -110,8 +110,8 @@
 	whoami = config user.email
 
 	# Open repository in browser
-	browse = "!f() { git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/https:\\/\\//' | sed 's/com:/com\\//' | xargs open; }; f"
 	web = "!f() { git remote -v | grep fetch | awk '{print $2}' | sed 's/git@/https:\\/\\//' | sed 's/com:/com\\//' | xargs open; }; f"
+	w = web
 
 [branch]
 	# Show most recently changed branches first.
