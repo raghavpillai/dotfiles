@@ -43,7 +43,9 @@ alias checkout="git checkout"
 alias clone="git clone"
 
 # Apps
-alias code="cursor"
+alias code="zed"
+alias claude="SHELL=/bin/bash claude"
+alias br="branchlet"
 
 aliases() {
   grep '^alias ' "$HOME/.aliases" | while IFS= read -r line; do
@@ -59,4 +61,3 @@ aliases() {
     printf "%s\t%s\n" "$name" "$value"
   done | column -s $'\t' -t
 }
-
