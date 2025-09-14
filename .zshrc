@@ -141,7 +141,7 @@ source ~/.aliases
 source <(fzf --zsh)
 
 # zoxide
-eval "$(zoxide init --cmd cd zsh)"
+# eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
 [ -s "/Users/raghav/.bun/_bun" ] && source "/Users/raghav/.bun/_bun"

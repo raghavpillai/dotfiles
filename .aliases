@@ -43,8 +43,8 @@ alias checkout="git checkout"
 alias clone="git clone"
 
 # Apps
-alias code="zed"
-alias claude="SHELL=/bin/bash claude"
+alias code="cursor"
+alias cl="SHELL=/bin/bash claude"
 alias br="branchlet"
 
 aliases() {
