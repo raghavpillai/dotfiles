@@ -11,6 +11,9 @@ alias n='npm'
 alias y='yarn'
 alias b='bun'
 
+alias bb='bun dev'
+alias bbb='bun build'
+
 # nav
 alias ls='eza'
 alias r="source ranger"

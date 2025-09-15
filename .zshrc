@@ -134,8 +134,11 @@ source ~/.aliases
 
 . "$HOME/.cargo/env"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Disable Powerlevel10k when Cursor Agent runs
+if [[ -n "$CURSOR_AGENT" ]]; then
+else
+  [[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh
+fi
 
 # fzf
 source <(fzf --zsh)
