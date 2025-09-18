@@ -12,7 +12,7 @@ alias y='yarn'
 alias b='bun'
 
 alias bb='bun dev'
-alias bbb='bun build'
+alias bbb='bun run build'
 
 # nav
 alias ls='eza'
