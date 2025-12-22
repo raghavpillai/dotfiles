@@ -42,7 +42,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -144,7 +144,21 @@ fi
 source <(fzf --zsh)
 
 # zoxide
-# eval "$(zoxide init --cmd cd zsh)"
+if [[ "$CLAUDECODE" != "1" ]]; then
+    eval "$(zoxide init --cmd cd zsh)"
+fi
 eval "$(starship init zsh)"
 
 [ -s "/Users/raghav/.bun/_bun" ] && source "/Users/raghav/.bun/_bun"
+
+# Branchlet setup: added on 2025-12-22
+branchlet() {
+  if [ $# -eq 0 ]; then
+    local dir=$(FORCE_COLOR=3 command branchlet --from-wrapper)
+    if [ -n "$dir" ]; then
+      cd "$dir" && echo "Branchlet: Navigated to $(pwd)"
+    fi
+  else
+    command branchlet "$@"
+  fi
+}
