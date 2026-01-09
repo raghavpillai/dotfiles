@@ -1,7 +1,34 @@
-ln -s ~/dev/dotfiles/.zshrc ~/.zshrc
-ln -s ~/dev/dotfiles/.zprofile ~/.zprofile
-ln -s ~/dev/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/dev/dotfiles/.oh-my-zsh ~/.oh-my-zsh
-ln -s ~/dev/dotfiles/.aliases ~/.aliases
-ln -s ~/dev/dotfiles/.p10k.zsh ~/.p10k.zsh
-ln -s ~/dev/dotfiles/.config/* ~/.config/
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Resolve this script's directory so DOTFILES_DIR works even if cloned elsewhere.
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DOTFILES_DIR="$SCRIPT_DIR"
+
+# Install Homebrew (if not installed)
+if ! command -v brew >/dev/null 2>&1; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Link dotfiles (overwrite existing files/symlinks)
+ln -sf "$DOTFILES_DIR/.zshrc"     "$HOME/.zshrc"
+ln -sf "$DOTFILES_DIR/.zprofile"  "$HOME/.zprofile"
+ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES_DIR/.aliases"   "$HOME/.aliases"
+
+mkdir -p "$HOME/.config"
+ln -sf "$DOTFILES_DIR/.config/"* "$HOME/.config/" 2>/dev/null || true
+
+# Apply Homebrew bundle for this repo if available
+if [ -f "$DOTFILES_DIR/Brewfile" ]; then
+  brew bundle --file="$DOTFILES_DIR/Brewfile"
+fi
+
+# Install gen-commit
+npm install -g @raghavp/gen-commit
+
+# Install branchlet
+npm install -g branchlet
+
+# Bun
+curl -fsSL https://bun.com/install | bash

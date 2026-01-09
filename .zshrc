@@ -11,8 +11,11 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/dev/dotfiles/.oh-my-zsh"
+# Path to your fully vendored Oh My Zsh installation in this repo.
+export ZSH="$HOME/dev/dotfiles/.oh-my-zsh/.oh-my-zsh"
+
+# Use the repo's custom directory for plugins/themes (p10k, etc.).
+export ZSH_CUSTOM="$HOME/dev/dotfiles/.oh-my-zsh/custom"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -85,7 +88,7 @@ plugins=(git zsh-syntax-highlighting fast-syntax-highlighting zsh-autosuggestion
 # zsh-autocomplete
 
 # Autocomplete
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+fpath+=${ZSH_CUSTOM:-$ZSH/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,7 +135,7 @@ esac
 
 source ~/.aliases
 
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 # Disable Powerlevel10k when Cursor Agent runs
 if [[ -n "$CURSOR_AGENT" ]]; then
