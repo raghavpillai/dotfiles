@@ -21,6 +21,7 @@ cask 'alt-tab'
 cask 'appcleaner'
 cask 'arc'
 cask 'bettertouchtool'
+cask 'chatgpt'
 cask 'claude'
 cask 'cursor'
 cask 'discord'
@@ -31,6 +32,7 @@ cask 'github'
 cask 'granola'
 cask 'jordanbaird-ice'
 cask 'latest'
+cask 'linearmouse'
 cask 'logi-options+'
 cask 'obsidian'
 cask 'ollama'
@@ -49,3 +51,4 @@ cask 'yaak'
 # Mac App Store
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
+mas 'Xnip', id: 1221250572
