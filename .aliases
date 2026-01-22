@@ -20,6 +20,7 @@ alias ta='tmux attach'
 alias tls='tmux ls'
 alias tn='tmux new'
 alias tks='tmux kill-session'
+
 # nav
 alias ls='eza'
 alias r="source ranger"
