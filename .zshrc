@@ -153,15 +153,3 @@ fi
 eval "$(starship init zsh)"
 
 [ -s "/Users/raghav/.bun/_bun" ] && source "/Users/raghav/.bun/_bun"
-
-# Branchlet setup: added on 2025-12-22
-branchlet() {
-  if [ $# -eq 0 ]; then
-    local dir=$(FORCE_COLOR=3 command branchlet --from-wrapper)
-    if [ -n "$dir" ]; then
-      cd "$dir" && echo "Branchlet: Navigated to $(pwd)"
-    fi
-  else
-    command branchlet "$@"
-  fi
-}

@@ -43,8 +43,10 @@
 	# Pull origin main
 	pm = pull origin main
 
-	# PR
-	pr = !"gh pr create -B main -f && gh pr view --web"
+	# PR (GitLab - glab)
+	pr = !"glab mr create -b main --fill && glab mr view --web"
+	# PR (GitHub - gh)
+	# pr = !"gh pr create --base main --fill && gh pr view --web"
 
 	# Push to remote
 	ps = push
