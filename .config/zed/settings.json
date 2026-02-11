@@ -7,11 +7,70 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
-  "theme": {
+  "ssh_connections": [
+    {
+      "host": "zealot-server",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/raghav/.claude/./"
+          ]
+        },
+        {
+          "paths": [
+            "/home/raghav/Sissy_run3"
+          ]
+        },
+        {
+          "paths": [
+            "/home/raghav/environment-generation"
+          ]
+        },
+        {
+          "paths": [
+            "/home/raghav/zealot-platform-new"
+          ]
+        }
+      ]
+    }
+  ],
+  "icon_theme": {
     "mode": "system",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme",
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "terminal": {
+    "font_size": 15.0,
+    "max_scroll_history_lines": 3000,
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "base_keymap": "VSCode",
+  "sticky_scroll": {
+    "enabled": true,
+  },
+  "gutter": {
+    "line_numbers": true,
+    "runnables": false,
+    "breakpoints": false,
+    "folds": true,
+    "min_line_number_digits": 3,
+  },
+  "buffer_font_fallbacks": ["monospace"],
+  "buffer_font_family": "Geist Mono",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
     "light": "One Light",
-    "dark": "One Dark"
-  }
+    "dark": "One Dark Pro",
+  },
 }
