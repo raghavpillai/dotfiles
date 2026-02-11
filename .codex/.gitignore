@@ -1,0 +1,9 @@
+# Ignore everything by default (runtime/user-specific data)
+*
+
+# Track only portable config
+!.gitignore
+!AGENTS.md
+!config.toml
+!skills/
+!skills/**

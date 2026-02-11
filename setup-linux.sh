@@ -50,6 +50,14 @@ elif [ -d "$HOME/.claude" ]; then
 fi
 ln -s "$DOTFILES_DIR/.claude" "$HOME/.claude"
 
+# Link Codex config (directory symlink)
+if [ -L "$HOME/.codex" ]; then
+    rm "$HOME/.codex"
+elif [ -d "$HOME/.codex" ]; then
+    rm -rf "$HOME/.codex"
+fi
+ln -s "$DOTFILES_DIR/.codex" "$HOME/.codex"
+
 # NVM
 if [ ! -d "$HOME/.nvm" ]; then
     echo "==> Installing NVM..."
