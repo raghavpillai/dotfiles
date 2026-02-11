@@ -1,0 +1,80 @@
+# Starship config to match powerlevel10k style
+format = """
+[](fg:blue)\
+$directory\
+[](fg:blue bg:yellow)\
+$git_branch\
+$git_status\
+[](fg:yellow)\
+$fill\
+$bun\
+$nodejs\
+$python\
+$rust\
+$golang
+$character"""
+
+# Disable the newline at the start of the prompt
+add_newline = false
+
+[fill]
+symbol = " "
+
+[directory]
+style = "bg:blue fg:white bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncate_to_repo = false
+
+[git_branch]
+style = "bg:yellow fg:black"
+format = "[ $branch]($style)"
+
+[git_status]
+style = "bg:yellow fg:black"
+format = "[$all_status$ahead_behind]($style)"
+modified = "!${count}"
+untracked = "?${count}"
+staged = "+${count}"
+deleted = "x${count}"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+
+# Right side modules
+[bun]
+format = "[$symbol$version]($style)"
+style = "fg:yellow"
+
+[nodejs]
+format = "[$symbol$version]($style)"
+style = "fg:green"
+
+[python]
+format = "[$symbol$version]($style)"
+style = "fg:blue"
+
+[rust]
+format = "[$symbol$version]($style)"
+style = "fg:red"
+
+[golang]
+format = "[$symbol$version]($style)"
+style = "fg:cyan"
+
+# Disable modules we don't want
+[package]
+disabled = true
+
+[hostname]
+disabled = true
+
+[username]
+disabled = true
+
+[cmd_duration]
+disabled = true
