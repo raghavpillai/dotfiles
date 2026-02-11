@@ -48,6 +48,8 @@ alias clone="git clone"
 # Apps
 alias code="cursor"
 alias cl="SHELL=/bin/bash claude --dangerously-skip-permissions"
+alias claude="SHELL=/bin/bash claude --dangerously-skip-permissions"
+alias codex="codex --yolo"
 alias br="branchlet"
 
 aliases() {
