@@ -20,6 +20,14 @@ ln -sf "$DOTFILES_DIR/.p10k.zsh"  "$HOME/.p10k.zsh"
 mkdir -p "$HOME/.config"
 ln -sf "$DOTFILES_DIR/.config/"* "$HOME/.config/" 2>/dev/null || true
 
+# Link Claude Code config (directory symlink — remove existing dir/symlink first)
+if [ -L "$HOME/.claude" ]; then
+  rm "$HOME/.claude"
+elif [ -d "$HOME/.claude" ]; then
+  rm -rf "$HOME/.claude"
+fi
+ln -s "$DOTFILES_DIR/.claude" "$HOME/.claude"
+
 # Apply Homebrew bundle for this repo if available
 if [ -f "$DOTFILES_DIR/Brewfile" ]; then
   brew bundle --file="$DOTFILES_DIR/Brewfile"

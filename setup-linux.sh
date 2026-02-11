@@ -37,9 +37,18 @@ ln -sf "$DOTFILES_DIR/.bashrc.linux" "$HOME/.bashrc"
 ln -sf "$DOTFILES_DIR/.aliases.linux" "$HOME/.aliases"
 ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 
-# Link ranger config
+# Link config directories
 mkdir -p "$HOME/.config"
 ln -sf "$DOTFILES_DIR/.config/ranger" "$HOME/.config/ranger"
+ln -sf "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml"
+
+# Link Claude Code config (directory symlink — remove existing dir/symlink first)
+if [ -L "$HOME/.claude" ]; then
+    rm "$HOME/.claude"
+elif [ -d "$HOME/.claude" ]; then
+    rm -rf "$HOME/.claude"
+fi
+ln -s "$DOTFILES_DIR/.claude" "$HOME/.claude"
 
 # NVM
 if [ ! -d "$HOME/.nvm" ]; then
