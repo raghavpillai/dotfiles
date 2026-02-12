@@ -58,6 +58,15 @@ elif [ -d "$HOME/.codex" ]; then
 fi
 ln -s "$DOTFILES_DIR/.codex" "$HOME/.codex"
 
+# Link shared AI skills for Codex (Claude skills reused via symlink)
+mkdir -p "$HOME/.agents"
+if [ -L "$HOME/.agents/skills" ]; then
+    rm "$HOME/.agents/skills"
+elif [ -d "$HOME/.agents/skills" ]; then
+    rm -rf "$HOME/.agents/skills"
+fi
+ln -s "$DOTFILES_DIR/.claude/skills" "$HOME/.agents/skills"
+
 # NVM
 if [ ! -d "$HOME/.nvm" ]; then
     echo "==> Installing NVM..."

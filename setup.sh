@@ -28,6 +28,23 @@ elif [ -d "$HOME/.claude" ]; then
 fi
 ln -s "$DOTFILES_DIR/.claude" "$HOME/.claude"
 
+# Link Codex config (directory symlink)
+if [ -L "$HOME/.codex" ]; then
+  rm "$HOME/.codex"
+elif [ -d "$HOME/.codex" ]; then
+  rm -rf "$HOME/.codex"
+fi
+ln -s "$DOTFILES_DIR/.codex" "$HOME/.codex"
+
+# Link shared AI skills for Codex (Claude skills reused via symlink)
+mkdir -p "$HOME/.agents"
+if [ -L "$HOME/.agents/skills" ]; then
+  rm "$HOME/.agents/skills"
+elif [ -d "$HOME/.agents/skills" ]; then
+  rm -rf "$HOME/.agents/skills"
+fi
+ln -s "$DOTFILES_DIR/.claude/skills" "$HOME/.agents/skills"
+
 # Apply Homebrew bundle for this repo if available
 if [ -f "$DOTFILES_DIR/Brewfile" ]; then
   brew bundle --file="$DOTFILES_DIR/Brewfile"
