@@ -4,6 +4,7 @@ brew 'ffmpeg'
 brew 'gh'
 brew 'git'
 brew 'grep'
+brew 'mosh'
 brew 'httpie'
 brew 'mas' # Mac App Store manager
 brew 'delta' # Git diff

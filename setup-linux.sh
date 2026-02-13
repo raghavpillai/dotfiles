@@ -7,7 +7,7 @@ DOTFILES_DIR="$SCRIPT_DIR"
 
 echo "==> Installing system packages..."
 sudo apt update
-sudo apt install -y git curl xclip ranger fzf
+sudo apt install -y git curl xclip ranger fzf mosh
 
 # eza (modern ls) - needs separate repo on Ubuntu
 if ! command -v eza &> /dev/null; then
@@ -66,6 +66,19 @@ elif [ -d "$HOME/.agents/skills" ]; then
     rm -rf "$HOME/.agents/skills"
 fi
 ln -s "$DOTFILES_DIR/.claude/skills" "$HOME/.agents/skills"
+
+# Ghostty remote open (opens local Ghostty windows from SSH sessions)
+echo "==> Installing ghostty remote opener..."
+mkdir -p "$HOME/.local/bin"
+curl -fsSL https://raw.githubusercontent.com/raghavpillai/ghostty-remote-open/main/ghostty-remote \
+    -o "$HOME/.local/bin/ghostty"
+chmod +x "$HOME/.local/bin/ghostty"
+
+# Zed remote open (opens local Zed projects from SSH sessions)
+echo "==> Installing zed remote opener..."
+curl -fsSL https://raw.githubusercontent.com/raghavpillai/zed-remote-open/main/zed-remote \
+    -o "$HOME/.local/bin/zed"
+chmod +x "$HOME/.local/bin/zed"
 
 # NVM
 if [ ! -d "$HOME/.nvm" ]; then
