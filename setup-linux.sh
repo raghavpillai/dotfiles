@@ -32,10 +32,17 @@ if ! command -v starship &> /dev/null; then
     curl -sS https://starship.rs/install.sh | sh -s -- -y
 fi
 
+# Claude Code
+if ! command -v claude &> /dev/null; then
+    echo "==> Installing Claude Code..."
+    curl -fsSL https://claude.ai/install.sh | bash
+fi
+
 echo "==> Linking dotfiles..."
 ln -sf "$DOTFILES_DIR/.bashrc.linux" "$HOME/.bashrc"
 ln -sf "$DOTFILES_DIR/.aliases.linux" "$HOME/.aliases"
 ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+ln -sf "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 
 # Link config directories
 mkdir -p "$HOME/.config"

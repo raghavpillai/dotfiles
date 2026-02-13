@@ -16,6 +16,7 @@ ln -sf "$DOTFILES_DIR/.zprofile"  "$HOME/.zprofile"
 ln -sf "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 ln -sf "$DOTFILES_DIR/.aliases"   "$HOME/.aliases"
 ln -sf "$DOTFILES_DIR/.p10k.zsh"  "$HOME/.p10k.zsh"
+ln -sf "$DOTFILES_DIR/.tmux.conf" "$HOME/.tmux.conf"
 
 mkdir -p "$HOME/.config"
 ln -sf "$DOTFILES_DIR/.config/"* "$HOME/.config/" 2>/dev/null || true
