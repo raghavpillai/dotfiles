@@ -42,7 +42,17 @@
       "Bash(codex:*)",
       "Bash(rsync:*)",
       "Bash(git add:*)",
-      "Bash(gencommit)"
+      "Bash(gencommit)",
+      "Bash(/Users/raghav/dev/dotfiles/.codex/.gitignore << 'EOF'\n# Ignore everything by default \\(runtime/user-specific data\\)\n*\n\n# Track only portable config\n!.gitignore\n!AGENTS.md\n!config.toml\nEOF)",
+      "Bash(ln:*)",
+      "Bash(git -C /Users/raghav/dev/dotfiles add --dry-run .codex/ .claude/)",
+      "Bash(git -C /Users/raghav/dev/dotfiles status)",
+      "Bash(git push:*)",
+      "Bash(git -C /Users/raghav/dev/dotfiles remote -v)",
+      "Bash(git -C /Users/raghav/dev/dotfiles push)",
+      "Bash(git -C /Users/raghav/dev/dotfiles status -u)",
+      "Bash(git -C /Users/raghav/dev/dotfiles diff .claude/.gitignore .claude/settings.local.json setup.sh setup-linux.sh)",
+      "Bash(git -C /Users/raghav/dev/dotfiles add setup.sh setup-linux.sh .claude/.gitignore)"
     ]
   }
 }
