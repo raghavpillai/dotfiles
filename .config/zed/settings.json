@@ -7,33 +7,37 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "formatter": {
+    "external": {
+      "command": "biome",
+      "arguments": ["format", "--stdin-file-path", "{buffer_path}"],
+    },
+  },
+  "format_on_save": "on",
+  "languages": {
+    "JSON": {
+      "tab_size": 2,
+      "formatter": {
+        "external": {
+          "command": "biome",
+          "arguments": ["format", "--stdin-file-path", "{buffer_path}"],
+        },
+      },
+    },
+  },
   "ssh_connections": [
     {
-      "host": "zealot-server",
+      "host": "gpu-server",
       "args": [],
       "projects": [
         {
-          "paths": [
-            "/home/raghav/.claude/./"
-          ]
+          "paths": ["/home/raghav/environment-generation"],
         },
         {
-          "paths": [
-            "/home/raghav/Sissy_run3"
-          ]
+          "paths": ["/home/raghav/zealot-platform-new"],
         },
-        {
-          "paths": [
-            "/home/raghav/environment-generation"
-          ]
-        },
-        {
-          "paths": [
-            "/home/raghav/zealot-platform-new"
-          ]
-        }
-      ]
-    }
+      ],
+    },
   ],
   "icon_theme": {
     "mode": "system",
