@@ -7,7 +7,16 @@ DOTFILES_DIR="$SCRIPT_DIR"
 
 echo "==> Installing system packages..."
 sudo apt update
-sudo apt install -y git curl xclip ranger fzf mosh
+sudo apt install -y git curl xclip ranger fzf mosh btop
+
+# delta (git pager)
+if ! command -v delta &> /dev/null; then
+    echo "==> Installing delta..."
+    DELTA_DEB="$(mktemp)"
+    curl -fsSL https://github.com/dandavison/delta/releases/latest/download/git-delta_0.18.2_amd64.deb -o "$DELTA_DEB"
+    sudo dpkg -i "$DELTA_DEB"
+    rm -f "$DELTA_DEB"
+fi
 
 # eza (modern ls) - needs separate repo on Ubuntu
 if ! command -v eza &> /dev/null; then

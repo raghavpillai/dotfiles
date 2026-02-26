@@ -4,6 +4,7 @@ brew 'ffmpeg'
 brew 'gh'
 brew 'git'
 brew 'grep'
+brew 'btop'
 brew 'mosh'
 brew 'httpie'
 brew 'mas' # Mac App Store manager
@@ -12,6 +13,9 @@ brew 'delta' # Git diff
 # Development
 brew 'pnpm'
 brew 'yarn'
+
+# Editors
+brew 'neovim'
 
 # Random
 brew 'zoxide'
