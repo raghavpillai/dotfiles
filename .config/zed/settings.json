@@ -7,6 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-6"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
   "formatter": {
     "external": {
       "command": "biome",
@@ -31,13 +39,27 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/raghav/environment-generation"],
+          "paths": [
+            "/Users/raghav"
+          ]
         },
         {
-          "paths": ["/home/raghav/zealot-platform-new"],
+          "paths": [
+            "/home/raghav/environment-generation"
+          ]
         },
-      ],
+        {
+          "paths": [
+            "/home/raghav/zealot-platform-new"
+          ]
+        }
+      ]
     },
+    {
+      "host": "mac-mini",
+      "args": [],
+      "projects": []
+    }
   ],
   "icon_theme": {
     "mode": "system",
@@ -77,4 +99,5 @@
     "light": "One Light",
     "dark": "One Dark Pro",
   },
+  "use_system_window_tabs": true,
 }
