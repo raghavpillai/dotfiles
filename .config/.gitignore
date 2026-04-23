@@ -1,1 +1,6 @@
 raycast/**
+sourcery/auth.yaml
+exercism/user.json
+sanity/config.json
+zed/embeddings/
+zed/prompts/
