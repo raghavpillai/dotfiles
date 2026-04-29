@@ -1,2 +1,17 @@
+notify = ["/Users/raghav/dev/dotfiles/.codex/plugins/cache/openai-bundled/computer-use/1.0.750/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+
 [projects."/Users/raghav/dev/dotfiles"]
 trust_level = "trusted"
+
+[projects."/Users/raghav/Documents/New project 2"]
+trust_level = "trusted"
+
+[marketplaces.openai-bundled]
+last_updated = "2026-04-18T05:15:25Z"
+source_type = "local"
+source = "/Users/raghav/dev/dotfiles/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[plugins."computer-use@openai-bundled"]
+enabled = true

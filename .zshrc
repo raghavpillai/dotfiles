@@ -195,3 +195,9 @@ branchlet() {
   fi
 }
 # End Branchlet setup
+
+# opencode
+export PATH=/Users/raghav/.opencode/bin:$PATH
+
+# OpenClaw Completion
+source "/Users/raghav/.openclaw/completions/openclaw.zsh"

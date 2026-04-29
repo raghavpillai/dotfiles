@@ -98,5 +98,22 @@
     "bindings": {
       "cmd-k": "assistant::InlineAssist"
     }
+  },
+  {
+    "bindings": {
+      "cmd-i escape": "agent::Toggle"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "cmd-i": null
+    }
+  },
+  {
+    "context": "AcpThread > Editor",
+    "bindings": {
+      "cmd-i": null
+    }
   }
 ]

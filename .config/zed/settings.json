@@ -7,7 +7,20 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "agent": {
+    "dock": "right",
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4-6"
@@ -45,12 +58,37 @@
         },
         {
           "paths": [
+            "/home/raghav/.claude"
+          ]
+        },
+        {
+          "paths": [
             "/home/raghav/environment-generation"
           ]
         },
         {
           "paths": [
+            "/home/raghav/internal-infra"
+          ]
+        },
+        {
+          "paths": [
+            "/home/raghav/monorepo"
+          ]
+        },
+        {
+          "paths": [
+            "/home/raghav/vuln-research"
+          ]
+        },
+        {
+          "paths": [
             "/home/raghav/zealot-platform-new"
+          ]
+        },
+        {
+          "paths": [
+            "/tmp/vuln-research-repos.csv"
           ]
         }
       ]
@@ -76,7 +114,7 @@
   },
   "git": {
     "inline_blame": {
-      "enabled": false,
+      "enabled": true,
     },
   },
   "base_keymap": "VSCode",

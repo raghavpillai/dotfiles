@@ -1,5 +1,5 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.4",
   "schemes" : [
     {
       "if" : {
@@ -12,7 +12,7 @@
       },
       "pointer" : {
         "acceleration" : 0,
-        "speed" : 0.125
+        "speed" : 0.25
       },
       "scrolling" : {
         "acceleration" : {
@@ -120,6 +120,26 @@
         },
         "speed" : {
           "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xb8",
+          "productName" : "Razer Viper V3 HyperSpeed",
+          "serialNumber" : "000000000000",
+          "vendorID" : "0x1532"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0,
+        "speed" : 0.25
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
         }
       }
     }
