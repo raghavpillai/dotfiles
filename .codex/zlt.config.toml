@@ -1,0 +1,8 @@
+model = "GPT-5.6-SOL"
+model_provider = "zlt"
+
+[model_providers.zlt]
+name = "Zealot Inference"
+base_url = "https://inference.zlt.dev/v1"
+wire_api = "responses"
+env_key = "LLM_PROXY_API_KEY"
