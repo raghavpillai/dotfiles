@@ -1,0 +1,3 @@
+interface:
+  display_name: "Manage LiteLLM"
+  short_description: "Manage the Zealot LiteLLM gateway and API routing"
